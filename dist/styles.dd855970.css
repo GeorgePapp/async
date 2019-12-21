@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0
+}
+
+body {
+  font-family: cursive
+}
+a{
+  text-decoration: none;
+  color:rgb(22, 48, 97)
+}
+.post-search {
+  width: 20rem;
+  display: block;
+  border-radius: 20px;
+  border: 2px solid rgb(156, 20, 156);
+  margin: auto;
+  padding: 1rem;
+  outline: none;
+  margin-bottom: 1rem
+}
+
+.user-render {
+  display: flex;
+  flex-direction: column;
+  margin: 0.3rem 0.3rem 0.7rem;
+
+}
+
+.user-render__title {
+  margin-top: 0.5rem;
+  border: 1px solid black;
+  width: 18rem;
+  text-align: center;
+  background: rgb(22, 48, 97);
+  color: white;
+  margin: 1rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.3rem 0.3rem 0.7rem;
+}
+
+.user-render__username,
+.user-render__city,
+.user-render__company {
+  border: 1px solid black;
+  margin: 0.3rem;
+  width: 11rem;
+  text-align: center;
+  background: rgb(22, 48, 97);
+  color: white;
+}
+
+.user-render__email,
+.user-render__website,
+.google-link {
+  border: 1px solid black;
+  margin: 0.3rem;
+  width: 17.7rem;
+  text-align: center;
+  background: rgb(161, 168, 173);
+  color: rgb(22, 48, 97);
+}
+
+.user-render__username,
+.user-render__email{
+  background: rgb(22, 48, 97);
+  color: white;
+}
+.user-render__city,
+.user-render__company{
+  background: rgb(161, 168, 173);
+  color: rgb(22, 48, 97);
+}
+
+.render {
+  display: flex;
+  justify-content: center
+}
+.user-render__body{
+  color:white;
+  margin:1rem;
+  padding:0.5rem;
+  line-height: 2rem;
+}
+.wrap{
+  border: 10px solid rgb(161, 168, 173);
+}
+
+.container {
+  margin: auto
+}
+
+.user-image {
+  height: 94px;
+  width: 91px;
+  margin-top: 0.7rem;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+}
+
+.render-card {
+  width: 600px;
+  border: 5px solid rgb(161, 168, 173);
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 2rem
+}
+
+img {
+  width: 600px;
+  height: 300px;
+  display: block;
+  margin: auto;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.body-span{
+  background: rgb(161, 168, 173);
+}
+
+/*# sourceMappingURL=/styles.dd855970.css.map */
