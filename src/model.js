@@ -1,5 +1,5 @@
-import {searchPost} from "./config"
-import {createUserPostDataPhotoMarkup} from "./view"
+import {searchPost} from "./config";
+import {createUserPostDataPhotoMarkup} from "./view";
 
 export function getUserData(inputValue) {
   fetch(`${searchPost.postUrl}${inputValue}`)
@@ -9,18 +9,17 @@ export function getUserData(inputValue) {
         fetch(`${searchPost.photosUrl}${post.id}`)
         .then(response => response.json())
         .then((img) => {
-          console.log(img)
           fetch(`${searchPost.userUrl}${inputValue}`)
           .then(response => response.json())
           .then((userInfo) => {
-                displayAllData(post, img, userInfo)
+                displayAllData(post, img, userInfo);
               })
           })
       })
 
-    }).catch(Error => console.log('error'))
+    }).catch(Error => console.log('error'));
 }
 
 function displayAllData(userPost, postImg, userInfo) {
-  createUserPostDataPhotoMarkup(userPost,userInfo,postImg[0])
+  createUserPostDataPhotoMarkup(userPost,userInfo,postImg[0]);
 }

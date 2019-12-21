@@ -144,7 +144,7 @@ exports.clearPreviousUserData = clearPreviousUserData;
 var _config = require("./config");
 
 function createUserPostDataPhotoMarkup(post, userData, photo) {
-  var userPosts = "\n        <div class=\"render-card\">\n        <div class=\"render\">\n        <img class=\"user-image\" src=\"https://www.w3schools.com/howto/img_avatar.png\" alt=\"user image\">\n        <div class='user-render'>\n        <p class=' user-render__username'>".concat(userData.username, "</p>\n        <p class=' user-render__city'>").concat(userData.address.city, "</p>\n        <p class=' user-render__company'>").concat(userData.company.name, "</p>\n        </div>\n        <div class=\"user-info\">\n        <p class=' user-render__email'>").concat(userData.email, "</p>\n        <p class=' user-render__website'>").concat(userData.website, "</p>\n        <div class=\"google-link\"><a target=\"_blank\"\n        href=\"").concat(_config.searchPost.googleMapsUrl).concat(userData.address.geo.lat, ",").concat(userData.address.geo.lng, "\">Googlemap link</a></div>\n        </div>\n        </div>\n        <div class=\"display\">\n        <img src=\"").concat(photo.url, "\" alt=\"user photo\">\n        <div class=\"wrap\">\n        <p class=\"user-render__title\">").concat(post.title, "</p>\n        <p class=\"user-render__body\"><span class=\"body-span\">").concat(post.body, "</span></p>\n        </div>\n        </div>\n        </div>\n      \n    ");
+  var userPosts = "\n        <div class=\"render-card\">\n             <div class=\"render\">\n                <img class=\"user-image\" src=\"https://www.w3schools.com/howto/img_avatar.png\" alt=\"user image\">\n                    <div class='user-render'>\n                        <p class=' user-render__username'>".concat(userData.username, "</p>\n                        <p class=' user-render__city'>").concat(userData.address.city, "</p>\n                        <p class=' user-render__company'>").concat(userData.company.name, "</p>\n                    </div>\n                    <div class=\"user-info\">\n                        <p class=' user-render__email'>").concat(userData.email, "</p>\n                        <p class=' user-render__website'>").concat(userData.website, "</p>\n                        <div class=\"google-link\"><a target=\"_blank\"\n                        href=\"").concat(_config.searchPost.googleMapsUrl).concat(userData.address.geo.lat, ",").concat(userData.address.geo.lng, "\">Googlemap link</a></div>\n                    </div>\n            </div>\n             <div class=\"display\">\n                <img src=\"").concat(photo.url, "\" alt=\"user photo\">\n                    <div class=\"wrap\">\n                        <p class=\"user-render__title\">").concat(post.title, "</p>\n                        <p class=\"user-render__body\"><span class=\"body-span\">").concat(post.body, "</span></p>\n                    </div>\n             </div>\n        </div>\n    ");
   document.querySelector(".container").insertAdjacentHTML('afterbegin', userPosts);
 }
 
@@ -173,7 +173,6 @@ function getUserData(inputValue) {
       fetch("".concat(_config.searchPost.photosUrl).concat(post.id)).then(function (response) {
         return response.json();
       }).then(function (img) {
-        console.log(img);
         fetch("".concat(_config.searchPost.userUrl).concat(inputValue)).then(function (response) {
           return response.json();
         }).then(function (userInfo) {
@@ -237,7 +236,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51375" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51782" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
