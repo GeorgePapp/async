@@ -17,7 +17,7 @@ export function getUserData(inputValue) {
           })
       })
 
-    }).catch(Error => console.log('error'));
+    }).catch(Error => console.log(`${Error}`));
 }
 
 function displayAllData(userPost, postImg, userInfo) {
